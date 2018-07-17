@@ -1,0 +1,190 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+        $(function () {
+            $('#BDDateTime').datetimepicker({
+                viewMode: 'years',
+                format: 'DD/MM/YYYY',
+                defaultDate: new Date()
+	        });
+        });
+	});
+</script>
+
+<div class="modal-body">
+
+    <!-- <h2 class="pmd-card-title-text">{{'user' | translate}}</h2> -->
+    <h1 style="font: bold">مبادرة فنادق مبارك وبياب لتحفيز الشباب</h1>
+    <p>هل تريد/ تريدي زيادة إيرادك الشهري؟</p>
+    <p>هل تبحث/ تبحثين عن فرصة عمل وأنت جالس في بيتك؟</p>
+    <p>أقنع / أقنعي أي ضيف بالحجز في فنادق مبارك وفنادق بياب واحصل/ احصلي على نسبة 10% عمولة من قيمة الحجز تحول على حسابك البنكي.</p>
+    <p>أنت الرابح دوماً معنا</p>
+        
+    <br><br>
+
+    <div>
+        <h2 style="font: bold">العراقة</h2>
+        <img style="width: 50% !important; height: 50% !important;" src="http://collectguestinformation.azurewebsites.net/Images/1.jpg">
+    </div>
+
+    <div>
+        <h2 style="font: bold">أصل الضيافة</h2>
+        <img style="width: 50% !important; height: 50% !important;" src="http://collectguestinformation.azurewebsites.net/Images/2.jpg">
+    </div>
+
+    <div>
+        <h2 style="font: bold">الرحابة</h2>
+        <img style="width: 50% !important; height: 50% !important;" src="http://collectguestinformation.azurewebsites.net/Images/3.jpg">
+    </div>
+
+    <div>
+        <h2 style="font: bold">المتعة</h2>
+        <img style="width: 50% !important; height: 50% !important;" src="http://collectguestinformation.azurewebsites.net/Images/4.jpg">
+    </div>
+    
+    <br><br>
+    <form class="form-horizontal" name="newUserForm">
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label for="first-name">{{'NameLbl' | translate}}</label>
+            <input required type="text"class="mat-input form-control" name="firstName" ng-pattern="/^(\D)+$/" ng-model="FirstName" ng-minlength="2" ng-maxlength="50">
+            <div ng-messages="newUserForm.firstName.$error" class="error">
+                    <div ng-show="newUserForm.firstName.$error.pattern">{{'TextOnly' | translate}}</div>
+                    <div ng-if="newUserForm.firstName.$error.required && !newUserForm.firstName.$pristine">{{'requiredErr' | translate}}</div>
+                    <div ng-if="(newUserForm.firstName.$error.minlength || newUserForm.firstName.$error.maxlength) && !newUserForm.firstName.$error.required">{{'NameLengthError' | translate}}</div>
+            </div>
+        </div>
+
+        <div style="width: 30% !important" class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label for="regular1" class="control-label">{{'BDLbl' | translate}}</label>
+                <input name="datetimeTxt" type="text" data-ng-model="bdDateTime" id="BDDateTime" class="form-control"/>
+        </div>
+     
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label for="first-name">{{'JobLbl' | translate}}</label>
+            <input required type="text" class="mat-input form-control" name="job" ng-pattern="/^(\D)+$/" ng-model="Job" ng-minlength="3" ng-maxlength="50">
+            <div ng-messages="newUserForm.job.$error" class="error">
+                    <div ng-show="newUserForm.job.$error.pattern">{{'TextOnly' | translate}}</div>
+                    <div ng-if="newUserForm.job.$error.required && !newUserForm.job.$pristine">{{'requiredErr' | translate}}</div>
+                    <div ng-if="(newUserForm.job.$error.minlength || newUserForm.job.$error.maxlength) && !newUserForm.job.$error.required">{{'NameLengthError' | translate}}</div>
+            </div>
+        </div>
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label pmd-textfield-floating-label-completed">
+            <label for="first-name">{{'CountryLbl' | translate}}</label>
+            <select style="width:30% !important" class="form-control"
+                ng-model="Country" >
+                    <option value="-1">{{'SelectCountry' | translate}}</option>
+                    <option ng-repeat="(key , value) in countriesCities" ng-value="key">{{key}}</option>
+                </select>
+        </div>
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label pmd-textfield-floating-label-completed">
+            <label for="first-name">{{'CityLbl' | translate}}</label>
+            <select style="width:30% !important" class="form-control"
+                ng-model="City" >
+                    <option value="-1">{{'SelectCity' | translate}}</option>  
+                    <option ng-repeat="(key , value) in countriesCities[Country]" ng-value="value">{{value}}</option>
+                </select>
+            
+        </div>
+
+        <!-- <div>
+            {{countriesCities[Country]}}
+        </div>
+        <div>
+                {{countriesCities.Country[City]}}
+        </div> -->
+
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label-completed">
+            <label>{{'MobileLbl' | translate}}</label>
+            <div class="row">
+                <div class="col-md-1">
+                    <input class="form-control" value="00966" disabled >
+                </div>
+                <div class="col-md-11">
+                    <input required type="text" class="mat-input form-control"  name="mobileNumber" numbers-only ng-model="MobileNum" ng-minlength="10" ng-maxlength="50">
+                </div>
+            </div>
+            
+            <!-- <span class="error" ng-show="newclientForm.phone1.$error.pattern">{{'NotPhoneNumber' | translate}}   </span> -->
+            <div ng-messages="newUserForm.mobileNumber.$error" class="error">
+                <div ng-if="newUserForm.mobileNumber.$error.required && !newUserForm.mobileNumber.$pristine">{{'MobileNumberReqError' | translate}}</div>
+                <div ng-if="(newUserForm.mobileNumber.$error.minlength || newUserForm.mobileNumber.$error.maxlength)">{{'MonileNumberLengthError' | translate}}</div>
+            </div>
+        </div>
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label>{{'EmailLbl' | translate}}</label>
+            <input required type="text" class="mat-input form-control" name="email" ng-model="Email" ng-pattern="/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/">
+            <span class="error" ng-show="newUserForm.email.$error.pattern">{{'WrongMail' | translate}}   </span>
+            <div ng-messages="newUserForm.email.$error" class="error">
+                <div ng-if="newUserForm.email.$error.required && !newUserForm.email.$pristine">{{'EmailRequiredError' | translate}}</div>
+            </div>
+        </div>
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label for="first-name">{{'BankLbl' | translate}}</label>
+            <input required type="text" class="mat-input form-control" name="bank" ng-pattern="/^(\D)+$/" ng-model="Bank" ng-minlength="3" ng-maxlength="50">
+            <div ng-messages="newUserForm.bank.$error" class="error">
+                    <div ng-show="newUserForm.bank.$error.pattern">{{'TextOnly' | translate}}</div>
+                    <div ng-if="newUserForm.bank.$error.required && !newUserForm.bank.$pristine">{{'requiredErr' | translate}}</div>
+                    <div ng-if="(newUserForm.bank.$error.minlength || newUserForm.bank.$error.maxlength) && !newUserForm.bank.$error.required">{{'NameLengthError' | translate}}</div>
+            </div>
+        </div>
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label for="first-name">{{'BankNoLbl' | translate}}</label>
+            <input required type="text" class="mat-input form-control" name="bankNo" numbers-only ng-model="BankNo" ng-minlength="10" ng-maxlength="50">
+            <!-- <span class="error" ng-show="newclientForm.phone1.$error.pattern">{{'NotPhoneNumber' | translate}}   </span> -->
+            <div ng-messages="newUserForm.bankNo.$error" class="error">
+                <div ng-if="newUserForm.bankNo.$error.required && !newUserForm.bankNo.$pristine">{{'BankAccNoReqError' | translate}}</div>
+                <div ng-if="(newUserForm.bankNo.$error.minlength || newUserForm.bankNo.$error.maxlength)">{{'MonileNumberLengthError' | translate}}</div>
+            </div>
+        </div>
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label for="first-name">{{'NationalityLbl' | translate}}</label>
+            <br/>
+            <label>
+                <input type="radio" ng-model="Nationality"  value="0" >
+                {{'NonSaudianLbl' | translate}}
+            </label>
+            <label>
+                <input type="radio" ng-model="Nationality" ng-value="1">
+                {{'SaudianLbl' | translate}}
+            </label><br/>
+        </div>
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label for="first-name">{{'GenderLbl' | translate}}</label>
+            <br/>
+            <label>
+                <input type="radio" ng-model="Gender"  value="0" >
+                {{'FemaleLbl' | translate}}
+            </label>
+            <label>
+                <input type="radio" ng-model="Gender" ng-value="1">
+                {{'MaleLbl' | translate}}
+            </label><br/>
+        </div>
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label for="first-name">{{'CommentLbl' | translate}}</label>
+            <textarea type="text" class="mat-input form-control" name="comment" ng-model="Comment" ng-minlength="3" ng-maxlength="100"></textarea>
+            
+        </div>
+
+        <!-- <tt>color = {{Gender}}</tt><br/> -->
+
+        <!-- <br><br>
+        <h3 style="font-weight: bold">
+            {{'CodeLbl' | translate}} {{}}
+        </h3> -->
+    </form>
+    
+    <div class="pmd-modal-action text-right">
+        <button ng-disabled="newUserForm.$invalid" class="btn pmd-ripple-effect btn-primary" type="button" ng-click="AddUser()">{{'AddBtn' | translate}}</button>
+    </div>
+
+</div>

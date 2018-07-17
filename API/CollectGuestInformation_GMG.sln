@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectGuestInformation.API", "CollectGuestInformation.API\CollectGuestInformation.API.csproj", "{9A69E7F7-5C37-45AA-BD13-C60310AD8B3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectGuestInformation.DAL", "CollectGuestInformation.DAL\CollectGuestInformation.DAL.csproj", "{7401F678-89A6-4F50-9316-8984BE164053}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frameworks", "Frameworks", "{AB5E5240-80BE-4B7D-A136-B070776F6E7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectGuestInformation.BLL", "CollectGuestInformation.BLL\CollectGuestInformation.BLL.csproj", "{CE0C9473-5808-4C30-81FA-1F644198A8AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Pattern", "..\..\Invitations_GMG\API\Frameworks\Repository.Pattern\Repository.Pattern.csproj", "{6E682A14-C872-4813-B620-76E108DEA683}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Pattern.Ef6", "..\..\Invitations_GMG\API\Frameworks\Repository.Pattern.Ef6\Repository.Pattern.Ef6.csproj", "{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Pattern", "..\..\Invitations_GMG\API\Frameworks\Service.Pattern\Service.Pattern.csproj", "{3FA0C7B6-3A40-40A7-BDD7-DD72426F6F19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A69E7F7-5C37-45AA-BD13-C60310AD8B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A69E7F7-5C37-45AA-BD13-C60310AD8B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A69E7F7-5C37-45AA-BD13-C60310AD8B3C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9A69E7F7-5C37-45AA-BD13-C60310AD8B3C}.Debug|x86.Build.0 = Debug|Any CPU
+		{9A69E7F7-5C37-45AA-BD13-C60310AD8B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A69E7F7-5C37-45AA-BD13-C60310AD8B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A69E7F7-5C37-45AA-BD13-C60310AD8B3C}.Release|x86.ActiveCfg = Release|Any CPU
+		{9A69E7F7-5C37-45AA-BD13-C60310AD8B3C}.Release|x86.Build.0 = Release|Any CPU
+		{7401F678-89A6-4F50-9316-8984BE164053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7401F678-89A6-4F50-9316-8984BE164053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7401F678-89A6-4F50-9316-8984BE164053}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7401F678-89A6-4F50-9316-8984BE164053}.Debug|x86.Build.0 = Debug|Any CPU
+		{7401F678-89A6-4F50-9316-8984BE164053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7401F678-89A6-4F50-9316-8984BE164053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7401F678-89A6-4F50-9316-8984BE164053}.Release|x86.ActiveCfg = Release|Any CPU
+		{7401F678-89A6-4F50-9316-8984BE164053}.Release|x86.Build.0 = Release|Any CPU
+		{CE0C9473-5808-4C30-81FA-1F644198A8AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE0C9473-5808-4C30-81FA-1F644198A8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE0C9473-5808-4C30-81FA-1F644198A8AE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CE0C9473-5808-4C30-81FA-1F644198A8AE}.Debug|x86.Build.0 = Debug|Any CPU
+		{CE0C9473-5808-4C30-81FA-1F644198A8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE0C9473-5808-4C30-81FA-1F644198A8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE0C9473-5808-4C30-81FA-1F644198A8AE}.Release|x86.ActiveCfg = Release|Any CPU
+		{CE0C9473-5808-4C30-81FA-1F644198A8AE}.Release|x86.Build.0 = Release|Any CPU
+		{6E682A14-C872-4813-B620-76E108DEA683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E682A14-C872-4813-B620-76E108DEA683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E682A14-C872-4813-B620-76E108DEA683}.Debug|x86.ActiveCfg = Debug|x86
+		{6E682A14-C872-4813-B620-76E108DEA683}.Debug|x86.Build.0 = Debug|x86
+		{6E682A14-C872-4813-B620-76E108DEA683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E682A14-C872-4813-B620-76E108DEA683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E682A14-C872-4813-B620-76E108DEA683}.Release|x86.ActiveCfg = Release|x86
+		{6E682A14-C872-4813-B620-76E108DEA683}.Release|x86.Build.0 = Release|x86
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Debug|x86.Build.0 = Debug|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Release|x86.ActiveCfg = Release|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Release|x86.Build.0 = Release|Any CPU
+		{3FA0C7B6-3A40-40A7-BDD7-DD72426F6F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA0C7B6-3A40-40A7-BDD7-DD72426F6F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA0C7B6-3A40-40A7-BDD7-DD72426F6F19}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3FA0C7B6-3A40-40A7-BDD7-DD72426F6F19}.Debug|x86.Build.0 = Debug|Any CPU
+		{3FA0C7B6-3A40-40A7-BDD7-DD72426F6F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA0C7B6-3A40-40A7-BDD7-DD72426F6F19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA0C7B6-3A40-40A7-BDD7-DD72426F6F19}.Release|x86.ActiveCfg = Release|Any CPU
+		{3FA0C7B6-3A40-40A7-BDD7-DD72426F6F19}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E682A14-C872-4813-B620-76E108DEA683} = {AB5E5240-80BE-4B7D-A136-B070776F6E7A}
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C} = {AB5E5240-80BE-4B7D-A136-B070776F6E7A}
+		{3FA0C7B6-3A40-40A7-BDD7-DD72426F6F19} = {AB5E5240-80BE-4B7D-A136-B070776F6E7A}
+	EndGlobalSection
+EndGlobal

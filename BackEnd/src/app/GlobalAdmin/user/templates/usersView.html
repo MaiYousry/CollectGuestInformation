@@ -1,0 +1,66 @@
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'excel', 'print'
+        ]
+    } );
+} );
+</script>
+
+<div>
+
+    <div ng-if="searchUserCtrl.userList.length == 0">
+        <span>{{'NoUserAvailable' | translate}}</span>
+    </div>
+
+    <div  ng-if=" searchUserCtrl.userList.length >0">
+
+        <div >
+            <br>
+            <table id="example"  class="display" style="width:100% ">
+                <thead>
+                    <tr>
+                        <th>{{'CodeeLbl' | translate}}</th>
+                        <th>{{'NameLbl' | translate}}</th>
+                        <th>{{'BDLbl' | translate}}</th>
+                        <th>{{'NationalityLbl' | translate}}</th>
+                        <th>{{'JobLbl' | translate}}</th>
+                        <th>{{'CountryLbl' | translate}}</th>
+                        <th>{{'CityLbl' | translate}}</th>
+                        <th>{{'MobileLbl' | translate}}</th>
+                        <th>{{'EmailLbl' | translate}}</th>
+                        <th>{{'GenderLbl' | translate}}</th>
+                        <th>{{'BankLbl' | translate}}</th>
+                        <th>{{'BankNoLbl' | translate}}</th>
+                        <th>{{'CommentLbl' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in searchUserCtrl.userList">
+                        <td  data-title="Name" width="20%">{{user.userCode}}</td>
+                        <td  data-title="Name" width="20%">{{user.userFirstName}}</td>
+                        <td  data-title="Name" width="20%" data-type="date">{{ user.userAge | date : 'mediumDate'}}</td>
+                        <td  data-title="Name" width="20%" ng-if="user.userNationality == 0"> {{'NonSaudianLbl' | translate}}</td>
+                        <td  data-title="Name" width="20%" ng-if="user.userNationality == 1">{{'SaudianLbl' | translate}}</td>
+                        <td  data-title="Name" width="20%">{{user.userJob}}</td>
+                        <td  data-title="Name" width="20%">{{user.userCountry}}</td>
+                        <td  data-title="Name" width="20%">{{user.userCity}}</td>
+                        <td  data-title="Name" width="20%">{{user.userMobile}}</td>
+                        <td  data-title="Name" width="20%">{{user.userEmail}}</td>
+                        <td  data-title="Name" width="20%" ng-if="user.userGender == 0"> {{'FemaleLbl' | translate}}</td>
+                        <td  data-title="Name" width="20%" ng-if="user.userGender == 1">{{'MaleLbl' | translate}}</td>
+                        <td  data-title="Name" width="20%">{{user.userBank}}</td>
+                        <td  data-title="Name" width="20%">{{user.userBankNo}}</td>
+                        <td  data-title="Name" width="20%">{{user.userComment}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <!-- <div style="text-align:center;" paging page="1" page-size="10" total="groupCtrl.groupList.totalCount" paging-action="groupCtrl.changePage(page)"
+         flex="nogrow" show-prev-next="true" show-first-last="true" hide-if-empty="true" disabled-class="hide">
+    </div> -->
+</div>
